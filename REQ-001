@@ -1,0 +1,24 @@
+ID: REQ-001 
+Importância: alta 
+Tipo: Página de Login 
+
+Requisitos Funcionais (RF) 
+O que o usuário consegue realizar na tela. 
+RF01 - Autenticação: O sistema deve permitir que o usuário acesse sua conta informando e-mail e senha. 
+RF02 - Recuperação de Senha: O sistema deve oferecer um link para redefinir a senha caso o usuário a esqueça. 
+RF03 - Manter Conectado: Opção para salvar a sessão do usuário (via cookies/tokens) para evitar logins frequentes. 
+RF04 - Cadastro: Link direcionando novos usuários para a página de registro.  
+
+Regras de Negócio (RN) 
+As condições lógicas para que as funções operem.  
+RN01 - Campos Obrigatórios: O botão "Entrar" só deve ser habilitado se ambos os campos (e-mail e senha) estiverem preenchidos. 
+RN02 - Bloqueio de Conta: Após 3 tentativas falhas consecutivas, a conta deve ser bloqueada por 30 minutos para evitar ataques de força bruta. 
+RN03 - Validação de Formato: O campo de e-mail deve validar a presença do caractere "@" e um domínio válido. 
+RN04 - Diferenciação de Erro: Por segurança, a mensagem de erro deve ser genérica (ex: "Usuário ou senha inválidos") para não confirmar se um e-mail existe na base. 
+
+Requisitos Não Funcionais (RNF) 
+Aspectos técnicos e de performance. 
+RNF01 - Segurança: As senhas devem ser armazenadas no banco de dados utilizando criptografia 
+RNF02 - Protocolo: A página deve trafegar obrigatoriamente via HTTPS (SSL/TLS). 
+RNF03 - Tempo de Resposta: A autenticação deve ser processada em menos de 2 segundos sob condições normais de rede. 
+RNF04 - Sessão: O token de acesso (como o JWT) deve expirar após 60 minutos de inatividade.  
