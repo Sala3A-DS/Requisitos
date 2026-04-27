@@ -1,0 +1,14 @@
+ID: REQ-001
+Tipo: funcional
+Prioridade: alta
+Descrição: o sistema deve permitir login via e-mail e senha
+Critério de aceitação:
+• E-mail válido;
+• Senha de mínimo 8 caracteres;
+• Bloqueio após 3 tentativas.
+Rastreabilidade: caso de uso UC-001.
+Jeff
+Icaro
+Giovany
+
+
