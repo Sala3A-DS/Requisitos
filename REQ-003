@@ -1,0 +1,27 @@
+ID: REQ-003
+TIPO: Pagina de Configurações 
+
+Visão Geral e Acesso
+Antes de detalhar os botões, é preciso dar contexto sobre a página em si.
+Objetivo da Página: Resumo rápido do que essa seção controla no sistema.
+Caminho de Navegação: Como o usuário chega até lá (Ex: Menu Lateral > Ícone de Engrenagem > Configurações do Sistema).
+Permissões (Nível de Acesso): Quem tem o direito de ver e de editar essas informações? (Ex: Apenas Administradores do sistema, ou qualquer usuário logado?).
+
+Detalhamento dos Campos (O Coração da Documentação)
+Para cada opção, campo de texto ou botão na tela, você precisa listar as seguintes características:
+Rótulo (Label): O nome exato da configuração como aparece na tela (Ex: "Ativar Notificações por E-mail").
+Descrição/Propósito: O que acontece na prática quando essa configuração é alterada.
+Tipo de Input: Como o usuário interage com isso? (Ex: Checkbox, Toggle/Switch, Dropdown/Menu Suspenso, Campo de Texto, Radio Button).
+Valor Padrão (Default): Como essa configuração vem preenchida "de fábrica" antes de qualquer alteração.
+Regras de Validação/Limites: Se for um campo de texto ou número, quais são as regras? (Ex: "Aceita apenas números", "Máximo de 50 caracteres", "Obrigatório formato de e-mail").
+Dependências (Condicionais): Essa opção depende de outra? (Ex: O campo "Frequência de E-mails" só fica visível se o toggle "Ativar Notificações por E-mail" estiver ligado).
+
+Comportamento e Impacto no Sistema
+As configurações mudam a forma como o software age, então os efeitos colaterais devem ser mapeados.
+Aplicação da Mudança: A alteração tem efeito imediato (em tempo real)? Exige que o usuário faça um novo login? Ou o sistema precisa ser reiniciado?
+Escopo do Impacto: Essa mudança afeta apenas o usuário que a configurou (configuração de perfil) ou afeta todos os usuários daquela conta/empresa (configuração global)?
+Mensagens de Feedback: Quais são os alertas de sucesso (Ex: "Configurações salvas com sucesso") ou de erro que a tela deve exibir?
+
+Elementos Visuais e Extras
+Imagens de Referência: Inclua capturas de tela (Screenshots) ou Wireframes (desenhos da tela) com marcações visuais para facilitar a localização dos campos.
+Auditoria (Logs): Especifique se o sistema deve guardar um histórico de quem alterou aquela configuração, o que foi alterado e quando (essencial para sistemas empresariais e de segurança).
