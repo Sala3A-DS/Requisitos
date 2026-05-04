@@ -1,0 +1,59 @@
+ID: REQ-002
+TIPO: Calendario/Agendamento
+
+Requisitos Funcionais (o que o sistema faz)
+Descrevem as funcionalidades principais:
+
+Usuário pode visualizar horários disponíveis
+Usuário pode realizar um agendamento
+Usuário pode cancelar ou editar um agendamento
+Sistema deve evitar conflitos de horário (duplo agendamento)
+Administrador pode:
+Cadastrar/editar/excluir horários disponíveis
+Gerenciar usuários
+Visualizar todos os agendamentos
+Sistema deve enviar confirmação (ex: email ou mensagem na tela)
+
+Requisitos Não Funcionais (como o sistema funciona)
+Características de qualidade:
+
+Desempenho: páginas devem carregar em até 02 segundos
+Segurança: login com autenticação (senha criptografada)
+Usabilidade: interface simples e intuitiva
+Disponibilidade: sistema disponível em horário escolar
+Compatibilidade: funcionar em celular e computador
+
+Tipos de Usuário
+Aluno/Usuário comum
+visualizar horários
+Administrador
+Gerencia horários, usuários e relatórios
+
+Regras de Negócio
+Cada usuário pode agendar no máximo 10 horários por dia/semana
+Agendamentos devem respeitar o horário de funcionamento (ex: 08h às 18h)
+Não é permitido agendar horários já ocupados
+Cancelamentos só podem ser feitos com 03 horas de antecedência
+
+Casos de Uso (resumo)
+Exemplos:
+
+Realizar agendamento
+Cancelar agendamento
+Consultar horários
+Gerenciar horários (admin)
+
+Requisitos de Interface
+Página inicial com calendário ou lista de horários
+Botão de agendamento visível
+Área de login
+Painel administrativo separado
+
+Estrutura de Dados (básico)
+Usuário (id, nome, email, senha)
+Agendamento (id, usuário, data, horário)
+Sala (id, nome, capacidade)
+
+Requisitos de Auditoria / Logs (opcional, mas bom)
+Registrar quem fez cada agendamento
+Registrar alterações e cancelamentos
