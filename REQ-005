@@ -1,0 +1,26 @@
+ID: REQ-005
+TIPO: Paginda de configuracoes - Mobile
+
+Requisitos Funcionais (O que o sistema faz)
+Perfil e Conta
+Edição de Perfil: O usuário deve poder alterar nome, foto e e-mail institucional.
+Alteração de Senha: Funcionalidade para redefinir a senha de acesso com validação de segurança.
+Vínculo Acadêmico: Visualização do cargo (aluno/professor) e número de matrícula (campo não editável).
+Preferências de Agendamento
+Filtros Padrão: Opção para definir uma sala preferida que aparecerá primeiro na busca.
+Duração Padrão: Definir o tempo padrão de reserva (ex: 45 min, 90 min).
+Notificações e Alertas
+Push Notifications: Botão (toggle) para ativar/desativar avisos de confirmação de reserva.
+Lembretes de Horário: Opção para receber alerta 15, 30 ou 60 minutos antes do horário agendado.
+Avisos de Cancelamento: Notificar o usuário caso a administração cancele o horário por manutenção.
+
+Requisitos Não Funcionais (Qualidade e Performance)
+Responsividade: A interface deve se adaptar a diferentes tamanhos de tela (iOS e Android).
+Sincronização: Alterações nas configurações devem ser replicadas na versão web instantaneamente.
+Acessibilidade: Suporte a modo escuro (Dark Mode) e ajuste de tamanho de fonte.
+Segurança: Dados sensíveis (como senha) devem ser mascarados durante a digitação.
+
+Elementos de Interface (UI)
+Switchers/Toggles: Para ligar ou desligar notificações.
+Lista de Opções: Estilo "Célula" (ícone + texto + seta) para navegação.
+Botão de Logout: Localizado em destaque (geralmente em vermelho) no final da página.
