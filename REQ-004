@@ -1,0 +1,34 @@
+ID: REQ-004
+TIPO: Pagina de Login - Mobile
+
+Descrição: o sistema deve permitir login via e-mail e senha do professor
+Critério de aceitação:
+* E-mail válido;
+* Senha de mínimo 8 caracteres;
+* Bloqueio após 3 tentativas.
+Rastreabilidade: caso de uso UC-001.
+
+Tipo: funcional
+Prioridade: alta
+Descrição: o sistema deve disponibilizar opção de recuperação de senha na página de login
+Critério de aceitação:
+* Botão "esqueci a senha" visível na tela;
+* Redirecionamento para página de redefinição de senha;
+* Envio de instruções para o e-mail do professor.
+Rastreabilidade: caso de uso UC-002.
+
+Tipo: funcional
+Prioridade: média
+Descrição: o sistema deve validar os campos de entrada no login
+Critério de aceitação:
+* Campos de e-mail e senha obrigatórios;
+* Exibição de mensagem de erro caso estejam vazios.
+Rastreabilidade: caso de uso UC-001.
+
+Tipo: não funcional
+Prioridade: média
+Descrição: o sistema deve garantir segurança no login
+Critério de aceitação:
+* Senha mascarada durante a digitação;
+* Transmissão segura dos dados.
+Rastreabilidade: caso de uso UC-001.
