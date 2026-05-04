@@ -1,0 +1,21 @@
+ID: REQ - 006
+TIPO: Pagina de Agendamento - Mobile
+
+Requisitos Funcionais (O que o sistema faz)
+* RF01 – Visualização de Grade Horária: O sistema deve apresentar uma lista ou grade de horários organizada verticalmente, facilitando a rolagem (scroll) no celular. Deve mostrar claramente o que é horário de abertura e fechamento da sala.
+* RF02 – Seleção de Data: O sistema deve oferecer um seletor de datas (calendário) que abra ao clicar na data atual. Também deve permitir trocar de dia usando setas laterais ou o gesto de deslizar (swipe).
+* RF03 – Reserva de Horário: O sistema deve permitir que o usuário selecione o horário de início e o horário de fim desejados com apenas alguns toques na tela.
+* RF04 – Bloqueio de Conflitos: O sistema deve desabilitar automaticamente o clique em horários que já estão reservados por outros usuários ou que já passaram (horários retroativos).
+* RF05 – Resumo da Sala: Antes de fechar a reserva, o sistema deve exibir um pequeno resumo dos recursos da sala escolhida (ex: "Sala de Informática 02 - 20 computadores").
+* RF06 – Confirmação de Agendamento: O sistema deve exibir um botão fixo (sticky button) no rodapé da tela para "Confirmar Agendamento" após a seleção do horário.
+
+Requisitos Não Funcionais (Como o sistema se comporta)
+* RNF01 – Adaptabilidade (Mobile First): Todos os elementos clicáveis (botões e horários) devem ter um tamanho mínimo que facilite o toque com o polegar, evitando cliques acidentais.
+* RNF02 – Performance de Dados: O sistema deve carregar os dados de disponibilidade de forma leve, para funcionar bem mesmo em conexões 3G/4G.
+* RNF03 – Padrão Visual de Status: O sistema deve usar um código de cores padrão: cinza para horários passados, vermelho para ocupados e uma cor vibrante (como azul ou verde) para horários disponíveis.
+* RNF04 – Segurança de Sessão: O sistema deve exigir login ativo para realizar reservas, garantindo que cada agendamento esteja atrelado a um CPF ou matrícula.
+
+Regras de Negócio (As "leis" do agendamento)
+* RN01 – Limite de Tempo: O tempo mínimo de agendamento é de 30 minutos e o máximo é de 2 horas consecutivas por aluno.
+* RN02 – Antecedência: O aluno só pode realizar agendamentos para, no máximo, os próximos 15 dias corridos.
+* RN03 – Tolerância: Caso o aluno não realize o login no computador da sala em até 15 minutos após o início do horário, a reserva é cancelada automaticamente (No-show).
