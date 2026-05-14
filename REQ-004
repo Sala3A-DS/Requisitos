@@ -1,34 +1,32 @@
 ID: REQ-004
-TIPO: Pagina de Login - Mobile
+Importância: alta
+Tipo: Página de Login - Mobile
 
-Descrição: o sistema deve permitir login via e-mail e senha do professor
-Critério de aceitação:
-* E-mail válido;
-* Senha de mínimo 8 caracteres;
-* Bloqueio após 3 tentativas.
-Rastreabilidade: caso de uso UC-001.
+Requisitos Funcionais (RF)
+O que o usuário consegue realizar na tela.
+RF01 - Autenticação do Docente: O sistema deve permitir que o professor acesse sua conta informando e-mail e senha no dispositivo móvel. (Rastreabilidade: UC-001)
+RF02 - Recuperação de Acesso: O sistema deve disponibilizar a opção de recuperação de senha diretamente na interface de login. (Rastreabilidade: UC-002)
+RF03 - Validação de Entradas: O sistema deve validar em tempo de execução os campos de entrada inseridos pelo usuário. (Rastreabilidade: UC-001)
 
-Tipo: funcional
-Prioridade: alta
-Descrição: o sistema deve disponibilizar opção de recuperação de senha na página de login
-Critério de aceitação:
-* Botão "esqueci a senha" visível na tela;
-* Redirecionamento para página de redefinição de senha;
-* Envio de instruções para o e-mail do professor.
-Rastreabilidade: caso de uso UC-002.
+Regras de Negócio (RN)
+As condições lógicas para que as funções operem.
+RN01 - Bloqueio por Segurança: A conta do professor deve ser bloqueada temporariamente após 3 tentativas de login falhas consecutivas. (Rastreabilidade: UC-001)
+RN02 - Tamanho da Credencial: O campo de senha deve exigir um comprimento mínimo obrigatório de 8 caracteres. (Rastreabilidade: UC-001)
+RN03 - Validação de Formato: O campo de e-mail deve validar a estrutura sintática para garantir que seja um endereço eletrônico válido. (Rastreabilidade: UC-001)
+RN04 - Campos Obrigatórios: Os campos de e-mail e senha são mandatórios, impedindo o envio do formulário caso estejam vazios. (Rastreabilidade: UC-001)
+RN05 - Fluxo de Redefinição: O processo de recuperação deve enviar obrigatoriamente um e-mail com as instruções de troca para o endereço do professor. (Rastreabilidade: UC-002)
 
-Tipo: funcional
-Prioridade: média
-Descrição: o sistema deve validar os campos de entrada no login
-Critério de aceitação:
-* Campos de e-mail e senha obrigatórios;
-* Exibição de mensagem de erro caso estejam vazios.
-Rastreabilidade: caso de uso UC-001.
+Requisitos Não Funcionais (RNF)
+Aspectos técnicos e de performance.
+RNF01 - Ocultação de Caracteres: A senha digitada deve ser obrigatoriamente mascarada na tela do dispositivo móvel durante a digitação. (Rastreabilidade: UC-001)
+RNF02 - Segurança no Tráfego: O sistema deve garantir a transmissão criptografada e segura dos dados trafegados entre o app e o servidor. (Rastreabilidade: UC-001)
 
-Tipo: não funcional
-Prioridade: média
-Descrição: o sistema deve garantir segurança no login
-Critério de aceitação:
-* Senha mascarada durante a digitação;
-* Transmissão segura dos dados.
-Rastreabilidade: caso de uso UC-001.
+Casos de Uso (Resumo)
+UC-001 - Efetuar Login (Mobile)
+UC-002 - Recuperar Senha (Mobile)
+
+Requisitos de Interface
+Formulário nativo mobile otimizado para preenchimento em telas de toque (touch screen).
+Botão "Esqueci a senha" visível, posicionado estrategicamente próximo ao campo de senha.
+Exibição de mensagens de erro claras e amigáveis caso os campos obrigatórios estejam vazios.
+Redirecionamento fluido para a tela dedicada de redefinição de credenciais.
