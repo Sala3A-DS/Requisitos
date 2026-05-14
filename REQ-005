@@ -1,26 +1,31 @@
 ID: REQ-005
-TIPO: Paginda de configuracoes - Mobile
+Importância: média
+Tipo: Página de Configurações - Mobile
 
-Requisitos Funcionais (O que o sistema faz)
-Perfil e Conta
-Edição de Perfil: O usuário deve poder alterar nome, foto e e-mail institucional.
-Alteração de Senha: Funcionalidade para redefinir a senha de acesso com validação de segurança.
-Vínculo Acadêmico: Visualização do cargo (aluno/professor) e número de matrícula (campo não editável).
-Preferências de Agendamento
-Filtros Padrão: Opção para definir uma sala preferida que aparecerá primeiro na busca.
-Duração Padrão: Definir o tempo padrão de reserva (ex: 45 min, 90 min).
-Notificações e Alertas
-Push Notifications: Botão (toggle) para ativar/desativar avisos de confirmação de reserva.
-Lembretes de Horário: Opção para receber alerta 15, 30 ou 60 minutos antes do horário agendado.
-Avisos de Cancelamento: Notificar o usuário caso a administração cancele o horário por manutenção.
+Requisitos Funcionais (RF)
+O que o usuário consegue realizar na tela.
+RF01 - Edição de Dados: O sistema deve permitir a alteração do nome, foto de perfil e e-mail institucional do usuário.
+RF02 - Redefinição de Credenciais: O sistema deve disponibilizar funcionalidade para alteração da senha de acesso atual.
+RF03 - Exibição de Vínculo: O sistema deve exibir o cargo (aluno/professor) e o número de matrícula do usuário.
+RF04 - Parametrização de Busca: O usuário deve conseguir definir uma sala preferida como filtro padrão para as buscas.
+RF05 - Tempo de Reserva: O usuário deve conseguir definir a duração padrão de suas reservas (ex: 45 min, 90 min).
+RF06 - Gestão de Push: O sistema deve disponibilizar chaves de ativação/desativação para avisos de confirmação de reserva.
+RF07 - Ajuste de Lembrete: O usuário deve conseguir selecionar a antecedência dos alertas de agendamento (15, 30 ou 60 minutos).
+RF08 - Alerta de Manutenção: O sistema deve notificar o usuário via push caso a administração cancele um horário por manutenção.
 
-Requisitos Não Funcionais (Qualidade e Performance)
-Responsividade: A interface deve se adaptar a diferentes tamanhos de tela (iOS e Android).
-Sincronização: Alterações nas configurações devem ser replicadas na versão web instantaneamente.
-Acessibilidade: Suporte a modo escuro (Dark Mode) e ajuste de tamanho de fonte.
-Segurança: Dados sensíveis (como senha) devem ser mascarados durante a digitação.
+Regras de Negócio (RN)
+As condições lógicas para que as funções operem.
+RN01 - Campos Bloqueados: Os campos de cargo e número de matrícula são estritamente de leitura, sendo impossível a edição pelo usuário.
+RN02 - Validação de Troca: A alteração de senha deve exigir a validação da senha atual e seguir as regras de complexidade do sistema.
+RN03 - Sincronização Síncrona: Qualquer alteração salva nas configurações mobile deve ser replicada em tempo real na versão web.
+
+Requisitos Não Funcionais (RNF)
+Aspectos técnicos e de performance.
+RNF01 - Multiplataforma: A interface deve ser responsiva e se adaptar nativamente aos sistemas iOS e Android.
+RNF02 - Acessibilidade Visual: O aplicativo deve oferecer suporte obrigatório a modo escuro (Dark Mode) e escalabilidade do tamanho da fonte.
+RNF03 - Mascaramento de Dados: Dados sensíveis de segurança (como o campo de nova senha) devem ser mascarados durante a digitação.
 
 Elementos de Interface (UI)
-Switchers/Toggles: Para ligar ou desligar notificações.
-Lista de Opções: Estilo "Célula" (ícone + texto + seta) para navegação.
-Botão de Logout: Localizado em destaque (geralmente em vermelho) no final da página.
+Uso de chaves seletoras (Switchers/Toggles) para ativar e desativar as preferências de notificações.
+Menu estruturado em lista de opções estilo "Célula" (composto por ícone, texto descritivo e seta indicativa de navegação).
+Botão de "Logout" (Sair da conta) posicionado com destaque visual (cor vermelha) no final da página de configurações.
