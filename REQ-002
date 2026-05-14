@@ -1,59 +1,45 @@
 ID: REQ-002
 TIPO: Calendario/Agendamento
+Importância: alta
 
-Requisitos Funcionais (o que o sistema faz)
-Descrevem as funcionalidades principais:
+Requisitos Funcionais (RF)
+O que o usuário consegue realizar na tela.
+RF01 - Visualização de Grade: O sistema deve permitir que o usuário visualize os horários disponíveis em formato de calendário ou lista.
+RF02 - Realizar Agendamento: O sistema deve permitir que o usuário selecione e reserve um horário disponível.
+RF03 - Gestão de Agendamento: O sistema deve permitir que o usuário edite ou cancele um agendamento já realizado.
+RF04 - Controle de Conflitos: O sistema deve impedir automaticamente o duplo agendamento no mesmo horário.
+RF05 - Painel do Administrador: Área restrita para cadastrar, editar, excluir horários e visualizar todos os agendamentos.
+RF06 - Gerenciamento de Usuários: O administrador deve conseguir gerenciar os cadastros e permissões do sistema.
+RF07 - Notificação de Confirmação: O sistema deve enviar uma confirmação imediata (e-mail ou alerta em tela) após a reserva.
+RF08 - Alerta de Lembrete: O sistema deve enviar um lembrete automático 30 minutos antes do horário agendado para o usuário.
 
-Usuário pode visualizar horários disponíveis
-Usuário pode realizar um agendamento
-Usuário pode cancelar ou editar um agendamento
-Sistema deve evitar conflitos de horário (duplo agendamento)
-Administrador pode:
-Cadastrar/editar/excluir horários disponíveis
-Gerenciar usuários
-Visualizar todos os agendamentos
-Sistema deve enviar confirmação (ex: email ou mensagem na tela)
+Regras de Negócio (RN)
+As condições lógicas para que as funções operem.
+RN01 - Limite de Uso: Cada usuário pode agendar no máximo X horários por dia/semana (limite alterado/parametrizável).
+RN02 - Janela de Funcionamento: Os agendamentos devem respeitar obrigatoriamente o horário de funcionamento comercial (ex: 08h às 18h).
+RN03 - Bloqueio de Ocupados: Não é permitido, sob nenhuma hipótese, selecionar ou agendar horários já ocupados por outro usuário.
+RN04 - Prazo de Cancelamento: Cancelamentos e edições só podem ser realizados com no mínimo 1h30 de antecedência do horário marcado.
 
-Requisitos Não Funcionais (como o sistema funciona)
-Características de qualidade:
-
-Desempenho: páginas devem carregar em até 02 segundos
-Segurança: login com autenticação (senha criptografada)
-Usabilidade: interface simples e intuitiva
-Disponibilidade: sistema disponível em horário escolar
-Compatibilidade: funcionar em celular e computador
+Requisitos Não Funcionais (RNF)
+Aspectos técnicos e de performance.
+RNF01 - Desempenho: As páginas do calendário e horários devem carregar em até 2 segundos.
+RNF02 - Segurança: Acesso restrito via login com autenticação e senhas criptografadas no banco de dados.
+RNF03 - Usabilidade: A interface do calendário deve ser simples, limpa e intuitiva para o usuário comum.
+RNF04 - Disponibilidade: O sistema deve permanecer ativo e estável obrigatoriamente durante todo o horário escolar/comercial.
+RNF05 - Compatibilidade: A interface deve ser responsiva, funcionando perfeitamente em celulares e computadores.
 
 Tipos de Usuário
-Aluno/Usuário comum
-visualizar horários
-Administrador
-Gerencia horários, usuários e relatórios
+Aluno / Usuário Comum: Permissão apenas para visualizar a grade e gerenciar seus próprios agendamentos.
+Administrador: Controle total sobre horários, usuários, configurações de travas e relatórios gerais.
 
-Regras de Negócio
-Cada usuário pode agendar no máximo 10 horários por dia/semana
-Agendamentos devem respeitar o horário de funcionamento (ex: 08h às 18h)
-Não é permitido agendar horários já ocupados
-Cancelamentos só podem ser feitos com 03 horas de antecedência
-
-Casos de Uso (resumo)
-Exemplos:
-
-Realizar agendamento
-Cancelar agendamento
-Consultar horários
-Gerenciar horários (admin)
+Casos de Uso (Resumo)
+UC01 - Realizar Agendamento
+UC02 - Cancelar/Editar Agendamento
+UC03 - Consultar Horários Disponíveis
+UC04 - Gerenciar Grade de Horários (Admin)
 
 Requisitos de Interface
-Página inicial com calendário ou lista de horários
-Botão de agendamento visível
-Área de login
-Painel administrativo separado
-
-Estrutura de Dados (básico)
-Usuário (id, nome, email, senha)
-Agendamento (id, usuário, data, horário)
-Sala (id, nome, capacidade)
-
-Requisitos de Auditoria / Logs (opcional, mas bom)
-Registrar quem fez cada agendamento
-Registrar alterações e cancelamentos
+Página inicial com calendário interativo ou lista cronológica de horários.
+Botão de agendamento em destaque visual.
+Área de login integrada ou redirecionamento para o REQ-001.
+Painel administrativo isolado das telas do usuário comum.
