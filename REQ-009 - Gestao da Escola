@@ -1,0 +1,22 @@
+ID: REQ-009
+Importância: alta
+Tipo: Página de Gestão da Escola (Painel dos Diretores)
+
+Requisitos Funcionais (RF)
+RF01 - Cadastro de Espaços: Inclusão, edição e exclusão de ambientes da escola (ex: laboratórios, quadras, salas de informática).
+RF02 - Categorização: Atribuição de tipos ou blocos para organizar e facilitar a busca dos espaços cadastrados.
+RF03 - Controle de Duração: Vínculo e ativação do tempo padrão de reserva permitido para cada espaço específico.
+RF04 - Vínculo de Períodos: Seleção de quais turnos (Manhã, Tarde ou Noite) estarão disponíveis para agendamento em cada local.
+RF05 - Status do Ambiente: Opção de ativar ou desativar um espaço (ficar invisível para reservas em caso de manutenção).
+
+Regras de Negócio (RN)As condições lógicas para que as funções operem.
+RN01 - Bloqueio de Duplicidade: Impedimento de cadastrar dois espaços com o mesmo nome no mesmo bloco ou unidade.
+RN02 - Dependência de Configuração: A duração e os períodos disponíveis para ativação nesta página devem ser puxados das regras previamente definidas pelo analista (REQ-008).
+RN03 - Preservação de Histórico: Um espaço não pode ser excluído se houver agendamentos futuros ativos vinculados a ele; o sistema deve sugerir a desativação.
+RN04 - Validação Mínima: O cadastro de um ambiente exige obrigatoriamente a definição de pelo menos um turno ativo e uma duração de tempo de reserva.
+
+Requisitos Não Funcionais (RNF)Aspectos técnicos e de performance.
+RNF01 - Atualização em Tempo Real: Reflexo imediato da ativação/desativação de espaços na tela de agendamento dos professores e alunos.
+RNF02 - Escalabilidade: Suporte para o cadastro de até 200 espaços por unidade escolar sem perda de desempenho na listagem.
+RNF03 - Rastreabilidade: Registro no banco de dados do ID do diretor que realizou a criação ou última modificação de cada espaço (Log de Auditoria).
+RNF04 - Usabilidade: Listagem dos espaços em formato de tabela ou cards com paginação a cada 15 itens para carregamento rápido.
