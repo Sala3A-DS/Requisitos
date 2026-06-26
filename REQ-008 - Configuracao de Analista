@@ -1,0 +1,25 @@
+ID: REQ-008
+Importância: alta
+Tipo: Página do Analista (Painel de Configurações)
+
+Requisitos Funcionais (RF)
+RF01 - Configuração de Aula: Definição do tempo padrão de duração de cada aula e do intervalo entre elas.
+RF02 - Gerenciamento de Turnos: Ativação ou desativação dos turnos de funcionamento (Manhã, Tarde e Noite).
+RF03 - Definição de Períodos: Ajuste dos horários exatos de inicio e término para cada um dos turnos ativos.
+RF04 - Customização de Marca: Campos para inserção manual do nome da instituição e upload do logotipo da escola.
+RF05 - Customização de Interface: Seleção da paleta de cores principal para alterar a identidade visual do sistema.
+RF06 - Visualização Prévia: Exibição em tempo real (preview) das alterações de nome, logo e cores antes de salvar.
+
+Regras de Negócio (RN) As condições lógicas para que as funções operem.
+RN01 - Validação Cronológica: O horário de término de um período deve ser obrigatoriamente posterior ao horário de inicio.
+RN02 - Preenchimento por Vínculo: Campos de horário de inicio e fim tornam-se obrigatórios apenas se o turno correspondente estiver ativo.
+RN03 - Restrição de Arquivo: O upload do logotipo aceita exclusivamente arquivos de imagem nos formatos PNG, JPG ou JPEG.
+RN04 - Limite de Tamanho: O arquivo do logotipo não pode exceder o tamanho máximo de 2MB.
+RN05 - Persistência Global: As alterações de layout (cores e logo) devem ser aplicadas imediatamente a todas as telas de alunos e professores após o salvamento.
+
+Requisitos Não Funcionais (RNF)Aspectos técnicos e de performance.
+RNF01 - Otimização de Imagem: Compactação automática do logotipo no servidor para evitar lentidão no carregamento das páginas.
+RNF02 - Responsividade: Interface adaptável para perfeito funcionamento em computadores, tablets e smartphones.
+RNF03 - Armazenamento de Mídia: Uploads salvos em serviço de nuvem seguro (ex: AWS S3 ou Firebase Storage) com links criptografados.
+RNF04 - Tempo de Aplicação: Atualização das variáveis de cor e marca aplicadas no banco de dados em menos de 1 segundo.
+RNF05 - Consistência Visual: Armazenamento das preferências de cor utilizando variáveis CSS (CSS Variables) para renderização instantânea.
